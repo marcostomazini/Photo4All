@@ -4,7 +4,7 @@
 
 # NODE JS
 node_modules/*
-*.rar
+Server/node_modules/*
 
 # Files for the Dalvik VM
 *.dex
