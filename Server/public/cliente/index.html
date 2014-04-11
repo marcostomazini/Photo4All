@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>ArquitetaWeb - Photo4All</title>
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+		<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+		<link rel="stylesheet" href="assets/css/ace.min.css" />
+		
+		<!-- specific plugin scripts -->
+		<link href='index.css' rel='stylesheet'/>
+		<script src='/js/jquery.min.js'></script>
+		<script src='/socket.io/socket.io.js'></script>
+		<script src='index.js'></script>	
+		<!-- specific plugin scripts -->
+		
+	</head>
+
+	<body>
+		<div class="main-container" id="main-container" style="text-align: center">			
+			<div class="page-header">
+				<h1>
+					<small>
+						<a href="/cliente/?">ArquitetaWeb</a></br>
+						Photo4FFX - Firefox OS
+					</small>
+				</h1>
+			</div>			
+			<div id="qrImage" class="pics"></div>
+			<div id="divMsgRetorno" style="display: none">
+				<i class="icon-ok bigger-110 green"></i>
+				<span id="msgRetorno"></span>
+			</div>
+			<form id="sendImage">
+				<div id="divDestination">
+					<input placeholder="destination id" style="text-align:center" id="destination" class="destination" type="text"/>
+				</div>
+				<div class="filebutton imagefile">							
+					<input class="imagefile" type="file" id="imagefile" accept="image/*">
+						<div id="divImageClick" class="btn btn-app btn-purple btn-sm filebutton">
+							<i class="icon-cloud-upload bigger-200"></i>Send																	
+							<span id="qtdeImg" class="badge badge-warning badge-left"></span>	
+						</div>
+					</input>					
+				</div>
+			</form>														
+		</div>
+	</body>
+	<script type="text/javascript">			
+		$( document ).ready(function() {    
+			var url = window.location.href;
+			var hash = url.substring(url.indexOf('?')+1);  
+			if (hash.length > 0) {
+				$("#destination").val(hash);		
+			}
+		});
+	</script>
+</html>

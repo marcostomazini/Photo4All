@@ -2,6 +2,10 @@
 *.apk
 *.ap_
 
+# NODE JS
+node_modules/*
+*.rar
+
 # Files for the Dalvik VM
 *.dex
 

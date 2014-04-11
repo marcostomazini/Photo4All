@@ -1,0 +1,16 @@
+{
+  "version" : "0.1",
+  "name": "Photo4Mirror",
+  "description": "Compartilhamento de Fotos",
+  "launch_path": "/index.html",
+  "type": "privileged",
+  "icons": {
+    "60": "/favicon.ico",
+	"128": "/favicon.ico"
+  },
+  "developer": {
+    "name": "Marcos Tomazini",
+    "url": "http://www.arquitetaweb.com"
+  },
+  "default_locale": "pt-br"
+}
