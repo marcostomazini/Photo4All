@@ -155,8 +155,8 @@ public class MainActivity extends Activity {
 	private void sendImage(String imagem) {
 		SocketIO socket = null;
 		try {
-			//socket = new SocketIO("http://192.168.10.102:5000"); // 23610
-			socket = new SocketIO("https://photo4ffx.herokuapp.com/"); // 23610
+			//socket = new SocketIO("http://192.168.10.102:5000");
+			socket = new SocketIO("http://photo4ffx.herokuapp.com"); // 23610
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
@@ -190,7 +190,7 @@ public class MainActivity extends Activity {
 		});
 		// socket.emit("echo", "echo");
 		AutenticacaoModel autenticacaoModel = new AutenticacaoModel();
-		autenticacaoModel.de = "123456";
+		autenticacaoModel.de = "123458";
 		autenticacaoModel.para = destination;
 		String jsonString = new Gson().toJson(autenticacaoModel);
 		socket.emit("userid_teste", jsonString);
